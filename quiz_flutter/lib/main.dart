@@ -30,55 +30,70 @@ class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Expanded(
           flex: 5,
-          child: Text(
-            "O Brasil é o pais abriga a maior comunidade japonesa fora do Japão",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold
-            ),
-          ),
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Center(
+              child: Text(
+                "O Brasil é o pais abriga a maior comunidade japonesa fora do Japão",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            )
+          )
         ),
         Expanded(
-          child: FlatButton(
-            color: Colors.green,
-            onPressed: (){},
-            padding:EdgeInsets.symmetric(vertical: 10.0) ,
-            child: Text("Verdadeiro",
-              style: TextStyle(
-                color: Colors.white,
-                backgroundColor: Colors.green
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: FlatButton(
+              color: Colors.green,
+              onPressed: (){},
+              padding:EdgeInsets.symmetric(vertical: 10.0) ,
+              child: Text("Verdadeiro",
+                style: TextStyle(
+                    color: Colors.white,
+                    backgroundColor: Colors.green
+                ),
               ),
             ),
-          ),
+          )
         ),
         Expanded(
-          child: FlatButton(
-            color: Colors.red,
-            onPressed: (){},
-            padding:EdgeInsets.symmetric(vertical: 10.0) ,
-            child: Text("Falso",
-              style: TextStyle(
-                  color: Colors.white,
-                  backgroundColor: Colors.red
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: FlatButton(
+              color: Colors.red,
+              onPressed: (){},
+              padding:EdgeInsets.symmetric(vertical: 10.0) ,
+              child: Text("Falso",
+                style: TextStyle(
+                    color: Colors.white,
+                    backgroundColor: Colors.red
+                ),
               ),
             ),
-          ),
+          )
         ),
         Expanded(
-          child: Row(
-            children: <Widget>[
-              const Icon(
-                Icons.check,
-                color: Colors.green,
-              )
-            ],
-          ),
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Row(
+              children: <Widget>[
+                const Icon(
+                  Icons.check,
+                  color: Colors.green,
+                )
+              ],
+            ),
+          )
         )
       ],
     );
