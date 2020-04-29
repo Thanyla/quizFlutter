@@ -1,8 +1,15 @@
 import 'package:quizflutter/pergunta.dart';
 class Quiz{
   List<Pergunta> _perguntas = [Pergunta('Durante o período colonial no Brasil, '
-                                          'o Rio de Janeiro se tornou capital de Portugal', true),
-                                Pergunta('O Brasil é o pais abriga a maior comunidade japonesa fora do Japão', true)];
+      'o Rio de Janeiro se tornou capital de Portugal', true),
+    Pergunta('O Brasil é o pais abriga a maior comunidade japonesa '
+        'fora do Japão', true),
+    Pergunta('O primeiro nome do Brasil  '
+        'foi Ilha de Vera Cruz', true),
+    Pergunta('A moeda que circula hoje  '
+        'no Brasil é o novo real', false),
+
+  ];
   int _numeroDaPergunta = 0;
 
   //MÉTODOS
@@ -18,9 +25,12 @@ class Quiz{
 
   //Retorna true se as questões acabaram e false se não
   bool verificaOrdem(){
-    if(_numeroDaPergunta == _perguntas.length)
+    if(_numeroDaPergunta < (_perguntas.length - 1)){
       return true;
-    return false;
+    }
+    else{
+      return false;
+    }
   }
 
   //Reiniciar quiz
@@ -30,7 +40,9 @@ class Quiz{
 
   //Proxima pergunta
   void proximaPergunta(){
-    _numeroDaPergunta++;
+    if(_numeroDaPergunta<(_perguntas.length - 1)){
+      _numeroDaPergunta++;
+    }
   }
 
 
