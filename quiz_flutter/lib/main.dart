@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//TODO:PASSO 11 - Importar a classe Quiz
+import 'package:quizflutter/quiz.dart';
 //TODO:PASSO 21 - Importar o rflutter_alert
 
 void main() => runApp(Quizz());
@@ -27,6 +27,9 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  Quiz quiz = new Quiz();
+  List<Icon> icones;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +42,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                "O Brasil é o pais abriga a maior comunidade japonesa fora do Japão",
+                quiz.getTextoPergunta(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
@@ -100,12 +103,6 @@ class _QuizPageState extends State<QuizPage> {
   }
 }
 
-//TODO:PASSO 3 - Inserir os Widgets na classe _QuizPageState
-//TODO:PASSO 9 - Criar as propriedades da classe Quiz
-//TODO:PASSO 10- Criar os métodos da classe Quiz
-
-//TODO:PASSO 12- Criar uma instancia de Quiz em _QuizPageState
-//TODO:PASSO 13- Criar uma Lista de icones List<Icon>
 //TODO:PASSO 14 - Fazer o texto da pergunta aparecer dentro do Widget text
 //TODO:PASSO 15 - Criar um método que verifica se a resposta está certa ou não ( verificaResposta )
 //TODO:PASSO 16 - OnPressed chamar o metodo verificaResposta
