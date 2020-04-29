@@ -8,7 +8,6 @@ class Quiz{
         'foi Ilha de Vera Cruz', true),
     Pergunta('A moeda que circula hoje  '
         'no Brasil é o novo real', false),
-
   ];
   int _numeroDaPergunta = 0;
 
